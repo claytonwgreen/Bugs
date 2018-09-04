@@ -1,28 +1,6 @@
 #include "Actor.h"
 #include "StudentWorld.h"
 
-/*
- 
-                    Graph Object
-                        Actor
-            Energy												NonEnergy (pebbles+)
- food+					Active								pools of water+ & poison+
- pheromones+   	  	ants   baby grasshoppers+
- anthills				   adult grasshoppers+
- 
- */
-
-/*
- 
- isEatable: Food
- isBitable: Ant, BabyGrasshopper, AdultGrasshopper
- isStunablePoisonable: Ant, BabyGrasshopper
- isAlive: ALL
- isChecked: ALL     //for making sure an actor gets its dosomething called once per tick
- isMovaeable: all but rock
- isDangerous: poison, grasshoppers, ants
- */
-
 
 //ACTOR
 Actor::Actor(int imgID, int x, int y, StudentWorld * studentWorld, Direction dir, int depth) : GraphObject(imgID, x, y)
