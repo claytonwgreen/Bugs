@@ -1,3 +1,21 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+#Unignore Makefile
+!Makefile
+
+.DS_Store
+
+### Above combination will ignore all files without extension except for makefile ###
+
+
+
 # Prerequisites
 *.d
 

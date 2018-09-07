@@ -4,23 +4,6 @@
 #include "GraphObject.h"
 #include "Compiler.h"
 
-// Students:  Add code to this file, Actor.cpp, StudentWorld.h, and StudentWorld.cpp
-/*
- 
-                                    Graph Object
-                                          |
-                                        Actor
- 
-                Energy                                      pools of water, poison, pebbles (non-energy)
-                   |
-       food, pheromones, anthills, Active
-                                      |
-                                ants    baby grasshoppers
-                                                |
-                                        adult grasshoppers
- 
- */
-
 
 class StudentWorld;
 

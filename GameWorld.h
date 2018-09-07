@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-const int START_PLAYER_LIVES = 1;	// usually 3, but this is a simulation, not a video game
+const int START_PLAYER_LIVES = 1;	
 
 class GameController;
 
@@ -58,8 +58,6 @@ public:
 		m_winnerColony = winner;
 	}
 	
-	 // The following should be used by only the framework, not the student
-
 	bool isGameOver() const
 	{
 		return m_lives == 0;

@@ -51,7 +51,6 @@ class GameController
 		setGameState(quit);
 	}
 
-	  // Meyers singleton pattern
 	static GameController& getInstance()
 	{
 		static GameController instance;

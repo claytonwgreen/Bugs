@@ -25,8 +25,6 @@ public:
                 m_grid[i][j] = empty;
     }
     
-    // This overload exists for backward compatibility with the original
-    // skelton code.
     LoadResult loadField(std::string filename)
     {
         std::string error;

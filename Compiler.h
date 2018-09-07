@@ -11,6 +11,7 @@
 
 #include "GameConstants.h"
 
+// for compiling of submitted ant files
 class Compiler
 {
 public:

@@ -87,7 +87,6 @@ class SoundFXController
 
 #endif
 
-  // Meyers singleton pattern
 inline SoundFXController& SoundFXController::getInstance()
 {
 	static SoundFXController instance;

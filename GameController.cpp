@@ -51,7 +51,7 @@ void GameController::initDrawersAndSounds()
 		{ IID_ANT_TYPE0, 0, "redant.tga" },
 		{ IID_ANT_TYPE1, 0, "greenant.tga" },
 		{ IID_ANT_TYPE2, 0, "yellowant.tga" },
-		{ IID_ANT_TYPE3, 0, "whiteant.tga" },		// todo: new ant graphic
+		{ IID_ANT_TYPE3, 0, "whiteant.tga" },	
 		{ IID_ANT_HILL, 0, "anthill.tga" },
 		{ IID_POISON, 0, "poison.tga" },
 		{ IID_FOOD, 0, "food.tga" },
@@ -279,7 +279,7 @@ void GameController::doSomething()
 
 void GameController::displayGamePlay()
 {
-	glEnable(GL_DEPTH_TEST); // must be done each time before displaying graphics or gets disabled for some reason
+	glEnable(GL_DEPTH_TEST); 
 	glLoadIdentity();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	gluLookAt(0, 0, 0, 0, 0, -1, 0, 1, 0);
@@ -354,7 +354,6 @@ static void doOutputStroke(double x, double y, double z, double size, const char
 
 		double len = glutStrokeLength(GLUT_STROKE_ROMAN, reinterpret_cast<const unsigned char*>(str)) / scaleDown;
 		x = -len / 2;
-		//size = 1;
 	}
 	GLfloat scaledSize = static_cast<GLfloat>(size / FONT_SCALEDOWN);
 	glPushMatrix();
@@ -366,11 +365,6 @@ static void doOutputStroke(double x, double y, double z, double size, const char
 		glutStrokeCharacter(GLUT_STROKE_ROMAN, *str);
 	glPopMatrix();
 }
-
-//static void outputStroke(double x, double y, double z, double size, const char* str)
-//{
-//	doOutputStroke(x, y, z, size, str, false);
-//}
 
 static void outputStrokeCentered(double y, double z, const char* str, double size = 1.0)
 {
