@@ -12,6 +12,8 @@
 
 .DS_Store
 
+Bugs
+
 ### Above combination will ignore all files without extension except for makefile ###
 
 
