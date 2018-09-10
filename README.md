@@ -6,7 +6,7 @@
 
 ---
 
-### Usage 
+### Running
 ```bash
 ./[Executable] [FieldFile] [BugFile] [BugFile] [BugFile] [BugFile]
 ```
@@ -20,7 +20,7 @@
  
 Ex:
 ```bash
-./Bugs ./FieldFiles/fieldFileMain.txt ./Ants/dumbant1.bug.txt ./Ants/dumbant2.bug.txt ./Ants/smartant.bug.txt ./Ants/smartant2.bug.txt
+./Bugs ./FieldFiles/fieldFileMain.txt ./Ants/dumbant1.bug.txt ./Ants/dumbant2.bug.txt ./Ants/smartant.bug.txt ./Ants/smartant2.bug.txt -raw
 ```
 
 ---
