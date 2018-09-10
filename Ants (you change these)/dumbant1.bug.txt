@@ -1,4 +1,5 @@
 colony: DumbAnt1
+
 start:
 moveForward
 if i_am_standing_on_my_anthill then goto drop_food
