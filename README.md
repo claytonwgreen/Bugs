@@ -34,11 +34,11 @@ occupying roughly 1/10th of a second. During each tick of the simulation, all of
 do something. 
 
 During each of the first five ticks of a competition simulation, each anthill will produce one new
-ant. Each anthill produces a different type of ant, and is controlled by one of the ant control files designated
+ant. Each anthill produces ants that are controlled by one of the ant control files designated
 when starting up the simulation (see "Running" section above). 
 
-Once an anthill has given birth to an ant, the ant’s behavior is entirely controlled by its and control file. This program’s unique
-instructions (created by a player) cause it to forage around the virtual field looking for food. When an ant finds food, it
+Once an anthill has given birth to an ant, the ant’s behavior is entirely controlled by its control file (see "Programming Your Ants" section). This file’s unique
+instructions (created by a player) cause the ant to forage around the virtual field looking for food. When an ant finds food, it
 can pick it and bring it back to its anthill for consumption by the anthill/queen ant. The moment
 the ant drops food on its anthill, the anthill will eat the food, increasing its
 own hit point count, and removing the food from the virtual field. Once the anthill/queen ant
