@@ -37,7 +37,7 @@ During each of the first five ticks of a competition simulation, each anthill wi
 ant. Each anthill produces ants that are controlled by one of the ant control files designated
 when starting up the simulation (see "Running" section above). 
 
-Once an anthill has given birth to an ant, the ant’s behavior is entirely controlled by its control file (see "Programming Your Ants" section). This file’s unique
+Once an anthill has given birth to an ant, the ant’s behavior is entirely controlled by its control file (see "Programming Your Ants" section below). This file’s unique
 instructions (created by a player) cause the ant to forage around the virtual field looking for food. When an ant finds food, it
 can pick it and bring it back to its anthill for consumption by the anthill/queen ant. The moment
 the ant drops food on its anthill, the anthill will eat the food, increasing its
@@ -131,3 +131,65 @@ same square. And when adult grasshoppers are bit, there’s a 50% chance that th
 immediately bite back. Finally, in addition to simply walking around like baby grasshoppers,
 there’s a 1 in 10 chance that adult grasshoppers will jump to another square within a 10-square
 radius during an active tick. 
+
+---
+
+### Building Field File
+
+- The field file details how the game field will be set up when the simulation is run. There are only three requirements for this file:
+	* The file must be a 64x64 character text file 
+	* The edges of the field must be filled occupied with pebbles 
+	* The number of anthills must match the number of ant program files passed in (2-4)
+- The rest of the layout is completely up to you
+- It is recommended that you place a good amount of food in the playing field, or else the game will often end with no winner
+- The labelse for each element you can place in the field are listed below
+	* ( * ) pebbles which block movement of all insects1
+	* ( g ) starting locations of baby grasshoppers.
+	* ( 0, 1, 2, 3 ) the location of the ant colonies’ anthills.
+	* ( w ) pools of water.
+	* ( f ) piles of food.
+	* ( p ) poison.
+	* ( space ) empty locations
+- See FieldFiles folder above for examples
+
+---
+
+### Programming Your Ants
+
+- The programming for each ant has been simplified to allow virtually anyone to "code" the behavior of a colony, using a specified set of possible commands (see below)
+- The ant control file is made up of different sections which you can jump to using the "goto" command
+	* The first section is called "start" and is the set of instructions that each ant from your colony will perform when they are first created, or when the command "goto start" is run
+	* After the "start" section, you may have as many or few additional sections, but make sure to put a "goto" command at the end of each section or else your ant will stop moving once control reaches the end of the section 
+	* You can also use "if" commands to check if certain conditions are true, such as your ant being on top of food which it can then pick up
+- The first line of your ant control file should be in the form "colony: *name*" so that you can see how your anthill is doing throughout the game (change *name* to whatever you want your ant colony name to be)
+- List of all possible "if" statements:
+	* i_smell_danger_in_front_of_me
+	* i_smell_pheromone_in_front_of_me
+	* i_was_bit
+	*  i_am_carrying_food
+	* i_am_hungry
+	* i_am_standing_on_my_anthill
+	* i_am_standing_on_food
+	* i_am_standing_with_an_enemy
+	* i_was_blocked_from_moving
+	* last_random_number_was_zero 	
+		* you can use this command to inject some randomness into your ants behavior such as "if last_random_number_was_zero then goto move_left" 
+- List of all commands:
+ 	* emitPheromone
+	* faceRandomDirection
+	* rotateClockwise
+	* rotateCounterClockwise
+	* moveForward
+	* bite
+	* pickupFood
+	* dropFood
+	* eatFood
+	* generateRandomNumber
+		* this takes an argurment that is an integer, the random number produced will be between 0 and that number, inlcusive
+
+- Look at the files in the Ants folder to see examples for inspiration and to get the syntax down
+
+
+
+
+# HAVE FUN
