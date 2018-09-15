@@ -1,5 +1,7 @@
 # Bugs
 
+A game where players code the behavior of ant colonies in order to create the most ants
+
 ### Dependencies 
 * [XQuartz](https://www.xquartz.org/releases/index.html)
 	* Built using v 2.7.11 
